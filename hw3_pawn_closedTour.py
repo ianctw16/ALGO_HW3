@@ -6,14 +6,17 @@ n = 0
 m = 0
 
 
+# main program
 def main():
     global n
     global m
+    # preprocess board's width and height
     if(m % 2 == 0 and n % 2 == 1):
         tmp = n
         n = m
         m = tmp
 
+    # creat board
     board = np.zeros((n, m))
 
     i = 0
@@ -22,6 +25,7 @@ def main():
     colors = ['springgreen', 'deepskyblue']
     int_color = 0
 
+    # main pawn's tour
     if(n % 2 == 0):
         # giving board the number in order.
         for point in range(1, n*m+1):
@@ -75,6 +79,7 @@ def main():
     window.mainloop()
 
 
+#  get board size and ui display
 def getSize():
     global n
     global m
@@ -91,6 +96,7 @@ def getSize():
     main()
 
 
+# ui widgets
 window = tk.Tk()
 window.configure(background='white')
 # frame = tk.Frame(window)
