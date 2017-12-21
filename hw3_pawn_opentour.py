@@ -8,6 +8,7 @@ m = 0
 
 # main program
 def main():
+    time_start = time.time()
     global n
     global m
     """
@@ -66,6 +67,8 @@ def main():
     else:
         print("Pawn's closed tour does not exist [odd*odd] board's solution.")
 
+    print(time.time()-time_start)
+    print(board)
     window.update()
     window.mainloop()
 
